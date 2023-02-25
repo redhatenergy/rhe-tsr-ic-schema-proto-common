@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.redhatenergy.tsr.ic.schema.proto.common";
+option java_outer_classname = "CommonProtos";
+
+package redhatenergy.tsr.ic.schema.proto.common;
+
+message Date {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+}
+
+enum AssetClass {
+  ASSET_CLASS_UNSPECIFIED = 0;
+  ASSET_CLASS_COMMODITY = 5;
+}
+
+enum Currency {
+  CURRENCY_UNSPECIFIED = 0;
+  CURRENCY_USD = 1;
+  CURRENCY_CAD = 2;
+}
+
+enum Frequency {
+  FREQUENCY_UNSPECIFIED = 0;
+  FREQUENCY_MINUTE = 1;
+  FREQUENCY_HOUR = 2;
+  FREQUENCY_DAY = 3;
+  FREQUENCY_MONTH = 4;
+}
+
+enum SettlementMethod {
+  SETTLEMENT_METHOD_UNSPECIFIED = 0;
+  SETTLEMENT_METHOD_FINANCIAL = 1;
+  SETTLEMENT_METHOD_PHYSICAL = 2;
+}
+
+enum UnitOfMeasure {
+  UNIT_OF_MEASURE_UNSPECIFIED = 0;
+  UNIT_OF_MEASURE_MMBTU = 1;
+  UNIT_OF_MEASURE_MWH = 2;
+}
